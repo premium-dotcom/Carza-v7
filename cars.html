@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cars — CARZA</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container nav">
+
+<a href="index.html" class="logo">
+CAR<span>ZA</span>
+</a>
+
+<nav id="mainNav">
+
+<a href="index.html">Home</a>
+<a href="cars.html" class="active">Cars</a>
+<a href="dealers.html">Dealers</a>
+<a href="dealer.html">Dealer Portal</a>
+<a href="admin.html">Admin</a>
+
+</nav>
+
+<button class="menu-button" onclick="toggleMenu()">☰</button>
+
+</div>
+
+</header>
+
+
+<section class="page-header">
+
+<div class="container">
+
+<div class="eyebrow">
+CARZA MARKETPLACE
+</div>
+
+<h1>Find your next car.</h1>
+
+<p>
+Search approved dealer listings.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="filters">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Search make or model"
+>
+
+<select id="locationFilter">
+
+<option value="">Any location</option>
+<option>Johannesburg</option>
+<option>Pretoria</option>
+<option>Cape Town</option>
+<option>Durban</option>
+
+</select>
+
+
+<select id="priceFilter">
+
+<option value="">Any price</option>
+<option value="200000">Under R200k</option>
+<option value="300000">Under R300k</option>
+<option value="400000">Under R400k</option>
+<option value="600000">Under R600k</option>
+
+</select>
+
+
+<select id="bodyFilter">
+
+<option value="">Any body type</option>
+<option>SUV</option>
+<option>Sedan</option>
+<option>Bakkie</option>
+<option>Hatchback</option>
+
+</select>
+
+
+<button onclick="filterCars()">
+Search
+</button>
+
+</div>
+
+
+<div id="resultsCount" class="results-count"></div>
+
+<div id="carsGrid" class="car-grid"></div>
+
+</div>
+
+</section>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
