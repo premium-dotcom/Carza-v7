@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dealer Portal — CARZA</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container nav">
+
+<a href="index.html" class="logo">
+CAR<span>ZA</span>
+</a>
+
+<nav id="mainNav">
+
+<a href="index.html">Home</a>
+<a href="cars.html">Cars</a>
+<a href="dealers.html">Dealers</a>
+<a href="dealer.html" class="active">Dealer Portal</a>
+<a href="admin.html">Admin</a>
+
+</nav>
+
+<button class="menu-button" onclick="toggleMenu()">☰</button>
+
+</div>
+
+</header>
+
+
+<main class="portal">
+
+<div class="container">
+
+
+<div id="authentication">
+
+<div class="portal-heading">
+
+<div class="eyebrow">
+CARZA DEALER PORTAL
+</div>
+
+<h1>
+Your stock.<br>
+One dashboard.
+</h1>
+
+<p>
+Dealers can create an account, sign in and submit vehicles
+for moderation.
+</p>
+
+</div>
+
+
+<div class="auth-grid">
+
+
+<form id="signupForm" class="panel">
+
+<h2>Create dealer account</h2>
+
+<label>
+
+Dealership
+
+<input
+id="signupName"
+required
+placeholder="Example Motors"
+>
+
+</label>
+
+
+<label>
+
+Email
+
+<input
+id="signupEmail"
+type="email"
+required
+placeholder="dealer@example.co.za"
+>
+
+</label>
+
+
+<label>
+
+Password
+
+<input
+id="signupPassword"
+type="password"
+required
+minlength="6"
+placeholder="Minimum 6 characters"
+>
+
+</label>
+
+
+<button class="primary-button">
+Create account
+</button>
+
+</form>
+
+
+
+<form id="loginForm" class="panel">
+
+<h2>Dealer login</h2>
+
+<label>
+
+Email
+
+<input
+id="loginEmail"
+type="email"
+required
+>
+
+</label>
+
+
+<label>
+
+Password
+
+<input
+id="loginPassword"
+type="password"
+required
+>
+
+</label>
+
+
+<button class="outline-button full-width">
+Log in
+</button>
+
+<small>
+Demo account:<br>
+demo@carza.co.za<br>
+Password: carza123
+</small>
+
+</form>
+
+</div>
+
+</div>
+
+
+
+<div id="dashboard" class="hidden">
+
+<div class="dashboard-top">
+
+<div>
+
+<div class="eyebrow">
+DEALER DASHBOARD
+</div>
+
+<h1 id="dealerWelcome"></h1>
+
+</div>
+
+<button
+class="outline-button"
+onclick="logoutDealer()"
+>
+Log out
+</button>
+
+</div>
+
+
+<div id="dealerStats" class="stats"></div>
+
+
+<section class="panel">
+
+<div class="panel-heading">
+
+<h2>Your stock</h2>
+
+<button
+class="primary-button"
+onclick="showVehicleForm()"
+>
++ Add vehicle
+</button>
+
+</div>
+
+
+<div id="dealerStock"></div>
+
+</section>
+
+</div>
+
+
+
+<div id="vehicleUpload" class="hidden">
+
+<div class="dashboard-top">
+
+<div>
+
+<div class="eyebrow">
+NEW LISTING
+</div>
+
+<h1>Add a vehicle.</h1>
+
+</div>
+
+<button
+class="outline-button"
+onclick="showDashboard()"
+>
+← Back
+</button>
+
+</div>
+
+
+<form id="vehicleForm" class="panel">
+
+<div class="form-grid">
+
+
+<label>
+Make
+<input id="vehicleMake" required>
+</label>
+
+
+<label>
+Model
+<input id="vehicleModel" required>
+</label>
+
+
+<label>
+Year
+<input id="vehicleYear" type="number" required>
+</label>
+
+
+<label>
+Price
+<input id="vehiclePrice" type="number" required>
+</label>
+
+
+<label>
+Mileage
+<input id="vehicleMileage" type="number" required>
+</label>
+
+
+<label>
+Location
+<input
+id="vehicleLocation"
+required
+placeholder="Johannesburg"
+>
+</label>
+
+
+<label>
+Body type
+
+<select id="vehicleBody">
+
+<option>SUV</option>
+<option>Sedan</option>
+<option>Bakkie</option>
+<option>Hatchback</option>
+
+</select>
+
+</label>
+
+
+<label>
+Transmission
+
+<select id="vehicleTransmission">
+
+<option>Automatic</option>
+<option>Manual</option>
+
+</select>
+
+</label>
+
+
+<label>
+Fuel
+
+<select id="vehicleFuel">
+
+<option>Petrol</option>
+<option>Diesel</option>
+<option>Hybrid</option>
+<option>Electric</option>
+
+</select>
+
+</label>
+
+
+<label>
+Image URL
+
+<input
+id="vehicleImage"
+placeholder="https://..."
+>
+
+</label>
+
+
+</div>
+
+
+<div class="notice">
+
+🛡️ V7 prototype: vehicle submissions are stored locally
+for demonstration and sent into the moderation queue.
+
+</div>
+
+
+<button class="primary-button">
+Submit for moderation →
+</button>
+
+</form>
+
+</div>
+
+
+</div>
+
+</main>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
