@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CARZA - A smarter vehicle marketplace for South Africa.">
+  <title>CARZA — Find Your Next Car</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">CAR<span>ZA</span></a>
+
+    <nav id="mainNav">
+      <a href="index.html" class="active">Home</a>
+      <a href="cars.html">Cars</a>
+      <a href="dealers.html">Dealers</a>
+      <a href="dealer.html">Dealer Portal</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+
+    <div class="eyebrow">SOUTH AFRICA'S SMARTER CAR MARKETPLACE</div>
+
+    <h1>
+      Find the car.<br>
+      <span>Skip the hassle.</span>
+    </h1>
+
+    <p class="hero-text">
+      Search dealer stock, compare vehicles and connect directly
+      with dealerships.
+    </p>
+
+    <div class="hero-search">
+
+      <input
+        id="homeSearch"
+        type="text"
+        placeholder="Make, model or keyword"
+      >
+
+      <select id="homeLocation">
+        <option value="">Any location</option>
+        <option>Johannesburg</option>
+        <option>Pretoria</option>
+        <option>Cape Town</option>
+        <option>Durban</option>
+      </select>
+
+      <select id="homePrice">
+        <option value="">Any price</option>
+        <option value="200000">Under R200k</option>
+        <option value="300000">Under R300k</option>
+        <option value="400000">Under R400k</option>
+        <option value="600000">Under R600k</option>
+      </select>
+
+      <button onclick="searchFromHome()">Search →</button>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div>
+        <div class="eyebrow">FEATURED STOCK</div>
+        <h2>Cars worth seeing.</h2>
+      </div>
+
+      <a href="cars.html" class="outline-button">
+        View marketplace →
+      </a>
+
+    </div>
+
+    <div id="featuredCars" class="car-grid"></div>
+
+  </div>
+
+</section>
+
+
+<section class="dark-section">
+
+  <div class="container smartmatch">
+
+    <div>
+
+      <div class="eyebrow light">
+        SMARTMATCH™
+      </div>
+
+      <h2>Tell CARZA what you need.</h2>
+
+      <p>
+        Budget, body type, location and more.
+        CARZA is designed to make finding the right vehicle easier.
+      </p>
+
+      <a href="cars.html" class="white-button">
+        Explore cars
+      </a>
+
+    </div>
+
+    <div class="match-card">
+
+      <strong>96%</strong>
+
+      <div>
+        Match<br>
+        <b>Toyota Fortuner</b>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      FOR DEALERS
+    </div>
+
+    <h2>Upload stock without touching code.</h2>
+
+    <div class="feature-grid">
+
+      <div class="feature">
+        <b>01</b>
+        <h3>Dealer account</h3>
+        <p>Dealerships get their own portal.</p>
+      </div>
+
+      <div class="feature">
+        <b>02</b>
+        <h3>Vehicle uploads</h3>
+        <p>Add vehicles using a simple form.</p>
+      </div>
+
+      <div class="feature">
+        <b>03</b>
+        <h3>Moderation</h3>
+        <p>Listings can be reviewed before publishing.</p>
+      </div>
+
+      <div class="feature">
+        <b>04</b>
+        <h3>Leads</h3>
+        <p>Buyers can connect with dealerships.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="container footer-content">
+
+    <div class="logo">
+      CAR<span>ZA</span>
+    </div>
+
+    <p>
+      V7 prototype — built for the next generation of vehicle discovery.
+    </p>
+
+  </div>
+
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
