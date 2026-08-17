@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>Admin — CARZA</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container nav">
+
+<a href="index.html" class="logo">
+CAR<span>ZA</span>
+</a>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="cars.html">Cars</a>
+<a href="dealers.html">Dealers</a>
+<a href="dealer.html">Dealer Portal</a>
+<a href="admin.html" class="active">Admin</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main class="portal">
+
+<div class="container">
+
+<div class="dashboard-top">
+
+<div>
+
+<div class="eyebrow">
+CARZA ADMIN
+</div>
+
+<h1>
+Moderation centre.
+</h1>
+
+<p>
+Review dealer submissions before publishing them.
+</p>
+
+</div>
+
+
+<button
+class="outline-button"
+onclick="resetDemoData()"
+>
+Reset demo
+</button>
+
+</div>
+
+
+<div id="adminStats" class="stats"></div>
+
+
+<section class="panel">
+
+<h2>
+Pending listings
+</h2>
+
+<div id="moderationQueue"></div>
+
+</section>
+
+</div>
+
+</main>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
